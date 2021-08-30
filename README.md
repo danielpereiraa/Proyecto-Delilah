@@ -26,11 +26,11 @@ git clone https://github.com/danielpereiraa/Proyecto-Delilah.git .
 npm install
 
 ### 3 - Creando base de datos
-*Abrir XAMPP y asegurarse que el puerto sobre el cual se está ejecutando es el 3306
-*Inicializar los servicios de Apache y MySQL
-*Abrir el panel de control del servicio MySQL
-*Generar una nueva base de datos llamada delilah desde el panel de control
-*Importar el archivo delilah.sql desde el panel de administracion recuerde editar el archivo app/confign/db.config.js con los datos de su entorno
+* Abrir XAMPP y asegurarse que el puerto sobre el cual se está ejecutando es el 3306
+* Inicializar los servicios de Apache y MySQL
+* Abrir el panel de control del servicio MySQL
+* Generar una nueva base de datos llamada delilah desde el panel de control
+* Importar el archivo delilah.sql desde el panel de administracion recuerde editar el archivo app/confign/db.config.js con los datos de su entorno
 
 ### 4 - Iniciar el servidor
 node server
