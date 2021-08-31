@@ -4,7 +4,6 @@ const jwt = require('jsonwebtoken');
 
 const jwtClave = "pR0Y3(tO_d3lil4h";
 
-exports.jwtClave;//{ jwtClave, jwt };
 
 
 //Post
@@ -39,8 +38,12 @@ exports.create = (req, res) => {
 //login creacion token
 
 exports.login = (req, res) =>{
-  Usuario.findByUser(req.body.username, (err, data) => {
-    if(req.body.username == data[0].user_name && req.body.password == data[0].password){
+  console.log(req.body.user_name);
+  Usuario.findByUser(req.body.user_name, (err, data) => {
+    console.log(data[0].user_name);
+    console.log(req.body.user_name);
+
+    if(req.body.user_name == data[0].user_name && req.body.password == data[0].password){
       let token = jwt.sign({usuario: data[0].user_name, admin: data[0].administrador, id: data[0].id}, jwtClave)
       res.status(200).send({token: token})
     }else{

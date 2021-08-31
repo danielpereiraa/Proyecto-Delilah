@@ -30,7 +30,7 @@ Usuario.create = (nuevoUsuario, result) => {
 }
 
 Usuario.findByUser = (user_sin_login, result) => {
-    db.query('SELECT * FROM usuarios WHERE user_name LIKE :user',
+    db.query('SELECT * FROM usuarios WHERE user_name = :user',
             {replacements : {user: user_sin_login}, type: db.QueryTypes.SELECT})
         .then(res => {
             result(null, res)
